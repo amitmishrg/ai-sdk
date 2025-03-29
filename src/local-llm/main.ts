@@ -6,7 +6,7 @@ export const lmstudio = createOpenAICompatible({
   baseURL: `http://127.0.0.1:1234/v1/`,
 });
 
-export const model = lmstudio('gemma-2-2b-it');
+export const model = lmstudio('mathstral-7b-v0.1');
 
 export const askLocalLLMQuestion = async (input: string) => {
   const { text } = await generateText({
