@@ -3,7 +3,7 @@ import { serve } from '@hono/node-server';
 import { once } from 'node:events';
 import { generateText, type CoreMessage } from 'ai';
 
-import { model } from '../modal';
+import { model } from '../model';
 
 export const startServer = async () => {
   const app = new Hono();

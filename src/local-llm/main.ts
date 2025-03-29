@@ -1,12 +1,12 @@
 import { createOpenAICompatible } from '@ai-sdk/openai-compatible';
 import { generateText } from 'ai';
 
-const lmstudio = createOpenAICompatible({
+export const lmstudio = createOpenAICompatible({
   name: 'lmstudio',
-  baseURL: `http://localhost:1234/v1`,
+  baseURL: `http://127.0.0.1:1234/v1/`,
 });
 
-export const model = lmstudio('');
+export const model = lmstudio('gemma-2-2b-it');
 
 export const askLocalLLMQuestion = async (input: string) => {
   const { text } = await generateText({
@@ -20,6 +20,6 @@ export const askLocalLLMQuestion = async (input: string) => {
 
 const input = `Tell me a story about your grandmother.`;
 
-const localLLMResult = await askLocalLLMQuestion(input);
+// const localLLMResult = await askLocalLLMQuestion(input);
 
-console.log(localLLMResult);
+// console.log(localLLMResult);
